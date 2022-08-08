@@ -78,66 +78,6 @@ img {
     }
 }
 
-.loading {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    border-radius: 50%;
-    border-top: 10px solid #ff6b6b;
-    animation: animate 2s linear infinite;
-
-}
-
-@keyframes animate {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.loading::after,
-.loading::before {
-    content: '';
-    top: -10px;
-    left: 0;
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    border-radius: 50%;
-}
-
-.loading::before {
-    transform: rotate(240deg);
-    border-top: 10px solid #58d892;
-}
-
-.loading::after {
-    transform: rotate(120deg);
-    border-top: 10px solid #f139e2;
-}
-
-.loading__items {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    text-align: center;
-    line-height: 200px;
-    color: #fff;
-    text-shadow: 0 0 10px #fff000;
-    animation: core 2s linear infinite;
-}
-
-@keyframes core {
-
-    0%,
-    100% {
-        transform: scale(0.2);
-    }
-
-    20% {
-        transform: scale(2);
-    }
-}
-
 /* header */
 .header__1 {
     padding: 20px 25px 10px 25px;
@@ -221,7 +161,7 @@ img {
     justify-content: space-between;
     align-items: center;
     height: 70px;
-    width: 100%;
+    width: 300px;
     padding-left: 10px;
     background-color: white;
     border-radius: 15px;
@@ -229,7 +169,7 @@ img {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    box-shadow: 0px 2px 12px #d2d2d2;
+    box-shadow: -1px 7px 15px 5px rgba(0, 0, 0, 0.05);
     animation: appear 0.5s;
     animation-timing-function: cubic-bezier(0.57, -0.3, 0.36, 1.2);
     transform: scale(0);
@@ -244,13 +184,20 @@ img {
 }
 
 .menus__detail h4 {
+    font-weight: 900;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     padding-bottom: 7px;
+    transition: 0.5s linear;
+}
+
+.menus__detail:hover h4 {
+    transition: 0.3s linear;
 }
 
 .menus__detail p {
+    font-size: medium;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -258,7 +205,9 @@ img {
 
 .menu__price {
     margin-right: -12px;
-    font-weight: 700;
+    transition: 0.3s linear;
+    font-weight: 900;
+    transition: 0.5s linear;
 }
 
 .check__icon {
@@ -267,27 +216,37 @@ img {
     align-items: center;
     background-color: #99E2D0;
     height: 70px;
-    width: 60px;
+    width: 70px;
     opacity: 0;
+    font-size: 24px;
+    font-weight: 900;
+    overflow: hidden;
     margin-left: 25px;
     margin-right: -70px;
-    border-radius: 0 10px 10px 0;
-    transition: all 500ms ease-in-out;
+    border-radius: 0 16px 16px 0;
+    transition: all 0.3s linear;
 }
+
 
 .check__icon>i {
     color: white;
+    border-radius: 50%;
+    font-size: 28px;
+    font-weight: 900;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+    transition-duration: 0.5s;
+}
+
+.menus__card:hover .check__icon>i {
+    transform: rotate(-360deg);
+    transition-duration: 0.5s;
 }
 
 .menus__card:hover :nth-child(3) {
     opacity: 1;
     margin-right: 0px;
-}
-
-.check__icon>.fas {
-    color: white;
-    transform: rotate(360deg);
-    transition: transform 3s;
+    transition: 0.3s linear;
 }
 
 @keyframes appear {
@@ -354,7 +313,6 @@ img {
 .heart {
     position: absolute;
     right: 20px;
-    top: 1;
 }
 
 .heart__far {
@@ -422,10 +380,10 @@ img {
 
 /* order button */
 .order-btn {
-    padding: 30px 0 80px 0;
-    text-align: center;
-    background-color: #F6F6F6;
-    border: none;
+    height: 3rem;
+    line-height: 0.1rem;
+    margin: 4rem auto;
+    width: 11rem;
 }
 
 .btn {
@@ -570,5 +528,4 @@ img {
     .footer__list a {
         color: white;
     }
-
 }
