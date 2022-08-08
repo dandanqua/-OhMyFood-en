@@ -376,8 +376,8 @@ main {
 
 .heart__icon {
   top: 10px;
-  height: 30px;
-  width: 32px;
+  height: 40px;
+  width: 40px;
   position: relative;
   background-color: #8b8b8b;
   cursor: pointer;
@@ -390,7 +390,7 @@ main {
   content: "";
   opacity: 0;
   transition-duration: 500ms;
-  background: linear-gradient(#9356dc, #ff79da);
+  background-image: linear-gradient(163deg, #ee73da 0%, #a05bdc 100%);
 }
 
 .heart__icon::before, .fa-2x {
@@ -403,24 +403,12 @@ main {
 
 .heart__icon:hover .heart-empty {
   opacity: 0;
-  animation: fill 0s ease-in-out both;
+  animation: fill 0s ease-out all 400ms;
 }
 
 @keyframes fill {
   0% {
     opacity: 1;
-  }
-  30% {
-    opacity: 0.7;
-  }
-  60% {
-    opacity: 0.2;
-  }
-  70% {
-    opacity: 0.1;
-  }
-  100% {
-    opacity: 0;
   }
 }
 
