@@ -1,2 +1,2 @@
-# -OhMyFood-en. Thrid project for 'OpenClassrooms
+OhMyFood-en. Third project for 'OpenClassrooms
 Mobile Food Ordering App
