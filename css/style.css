@@ -404,7 +404,7 @@ main {
 
 .heart__icon:hover .heart-empty {
   opacity: 0;
-  animation: fill 0s ease-outz 400ms;
+  animation: fill 0s ease-out 400ms;
 }
 
 @keyframes fill {
