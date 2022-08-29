@@ -1,0 +1,36 @@
+.header {
+    width: 100%;
+
+    &_img {
+        top: 50%;
+        max-width: 80%;
+        position: relative;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 8px;
+        margin-bottom: 5px;
+    }
+}
+
+/* header for menu-page */
+.header__1 {
+    padding: 20px 25px 10px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 63px;
+
+    & .header1__logo {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    & .page__back .fas {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,157 @@
+main {
+    padding: 55px 20px 45px 20px;
+    background-color: #F6F6F6;
+
+    & .restaurant h2 {
+        padding-left: 5px;
+    }
+
+    & .restaurant p {
+        padding-left: 5px;
+    }
+}
+  
+.restaurant__Cards {
+    background-color: #F6F6F6;
+
+    & .restaurant__Card {
+        display: flex;
+        flex-direction: column;
+        margin: 16px 0;
+        border: none;
+        border-radius: 18px;
+        box-shadow: 0px 4px 8px lightgrey;
+        position: relative;
+        overflow: hidden;
+
+        & img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+
+        & .restau__image {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 8px;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        & .rest__detail {
+            padding: 8px 12px;
+            display: flex;
+            justify-content: space-between;
+            color: #000;
+            background-color: #fff;
+            cursor: pointer;
+        
+            & .rest__desc {
+                width: 90%;
+                line-height: 1.5;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+        
+                & h2 {
+                    font-size: 20px;
+                    padding-left: 2px;
+                    flex-wrap: wrap;
+                    font-weight: bold;
+                }
+        
+                & p {
+                    font-size: 18px;
+                }
+            }
+        
+            & .heart__icon {
+                display: flex;
+                align-items: center;
+                top: 10px;
+                height: 40px;
+                width: 40px;
+                position: relative;
+                background-color: #8b8b8b;
+                cursor: pointer;
+
+                &:hover::before {
+                    opacity: 1;
+                    transition-duration: 500ms;
+                }
+            
+                &::before {
+                    content: "";
+                    opacity: 0;
+                    transition-duration: 500ms;
+                    background-image: linear-gradient(163deg, #ee73da 0%, #a05bdc 100%);
+                }
+            
+                &::before, .fa-2x {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                }
+            
+                &:hover .heart-empty {
+                    opacity: 0;
+                    animation: fill 0s ease-out all 400ms;
+                }
+            
+                & .fa-2x  {
+                    background-color: #fff;
+                    mix-blend-mode: lighten;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid transparent;
+                }
+            }
+        }
+
+        & .new {
+            position: absolute;
+            border-radius: 4px;
+            background-color: #99E2D0;
+            color: #1A9778;
+            padding: 8px;
+            top: 16px;
+            right: 10px;
+            font-weight: bold;
+        }
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px){
+    .restaurant__Cards {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+
+        & .restaurant__Card {
+            margin: 8px;
+            flex: 35%;
+
+            & .rest__detail {
+                font-size: 12px;
+            }
+        }
+    }    
+}
+
+/* large devices (large laptops and desktops, 1024px and up) */
+@media screen and (min-width: 1024px){
+    .restaurant__Cards {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+
+        & .restaurant__Card {
+            margin: 8px;
+            flex: 15%;
+        }
+    }
+}
