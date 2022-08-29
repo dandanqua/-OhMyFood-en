@@ -129,7 +129,7 @@ li {
 /* Header */
 .header {
   padding: 2px;
-  box-shadow: 0 0 5px;
+  box-shadow: 0px 0px 5px 0px;
   position: relative;
   text-align: center;
 }
@@ -404,7 +404,7 @@ main {
 
 .heart__icon:hover .heart-empty {
   opacity: 0;
-  animation: fill 0s ease-out all 400ms;
+  animation: fill 0s ease-outz 400ms;
 }
 
 @keyframes fill {
